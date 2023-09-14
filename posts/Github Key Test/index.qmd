@@ -1,0 +1,22 @@
+---
+title:  Test of Github Keys in RStudio
+format: html
+---
+
+So here is a test document to see how it plays out. I hope that this process can be more streamlined. Not sure how this plays out on a Windows computer.
+
+```{r}
+#| message: false
+library(tidyverse)
+library(ggthemes)
+data("ChickWeight")
+glimpse(ChickWeight)
+```
+
+```{r}
+ChickWeight %>%
+  ggplot(aes(x=Time, y=weight, color = Diet)) +
+  geom_point() +
+  theme_classic()
+```
+
